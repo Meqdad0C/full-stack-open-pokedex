@@ -8,14 +8,14 @@ on:
       - master
 
 jobs:
-  test_schedule:
+  health_schedule:
     runs-on: ubuntu-20.04
     steps:
       - name: Check the deployed service URL
         uses: jtalk/url-health-check-action@v3
         with:
           # Check the following URLs one by one sequentially
-          url: https://poki-ydo9.onrender.com
+          url: https://poki-ydo9.onrender.comm
           # Fail this action after this many failed attempts
           max-attempts: 3 # Optional, defaults to 1
           # Delay between retries
